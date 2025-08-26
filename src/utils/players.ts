@@ -11,11 +11,20 @@ import { PlayersProps } from "@/types";
 export const getMoviePlayers = (id: string | number): PlayersProps[] => {
   return [
     {
-      title: "VidLink",
-      source: `https://vidlink.pro/movie/${id}?primaryColor=006fee&autoplay=false`,
+      title: "Kflix",
+      source: `https://player.videasy.net/movie/${id}`,
       recommended: true,
       fast: true,
+    },
+    {
+      title: "VidSrc",
+      source: `https://vidsrc.cc/v2/embed/movie/${id}?autoPlay=false`,
       ads: true,
+    },
+    {
+      title: "<Vidplus>",
+      source: `https://player.vidplus.to/embed/movie/${id}`,
+      recommended: true,      
     },
     {
       title: "<Embed>",
@@ -70,11 +79,6 @@ export const getMoviePlayers = (id: string | number): PlayersProps[] => {
       ads: true,
     },
     {
-      title: "VidSrc 4",
-      source: `https://vidsrc.cc/v2/embed/movie/${id}?autoPlay=false`,
-      ads: true,
-    },
-    {
       title: "VidSrc 5",
       source: `https://vidsrc.cc/v3/embed/movie/${id}?autoPlay=false`,
       recommended: true,
@@ -86,6 +90,12 @@ export const getMoviePlayers = (id: string | number): PlayersProps[] => {
       source: `https://moviesapi.club/movie/${id}`,
       ads: true,
     },
+    {
+      title: "VidLink",
+      source: `https://vidlink.pro/movie/${id}?primaryColor=006fee&autoplay=false`,
+      fast: true,
+      ads: true,
+    },    
   ];
 };
 
@@ -106,10 +116,20 @@ export const getTvShowPlayers = (
 ): PlayersProps[] => {
   return [
     {
-      title: "VidLink",
-      source: `https://vidlink.pro/tv/${id}/${season}/${episode}?primaryColor=f5a524&autoplay=false`,
+      title: "Kflix",
+      source: `https://player.videasy.net/tv/${id}/${season}/${episode}`,
       recommended: true,
       fast: true,
+      ads: true,
+    },
+    {
+      title: "VidSrc",
+      source: `https://vidsrc.cc/v2/embed/tv/${id}/${season}/${episode}?autoPlay=false`,
+      ads: true,
+    },
+    {
+      title: "<Vidplus>",
+      source: `https://player.vidplus.to/embed/tv/${id}/${season}/${episode}`,
       ads: true,
     },
     {
@@ -165,12 +185,7 @@ export const getTvShowPlayers = (
       ads: true,
     },
     {
-      title: "VidSrc 4",
-      source: `https://vidsrc.cc/v2/embed/tv/${id}/${season}/${episode}?autoPlay=false`,
-      ads: true,
-    },
-    {
-      title: "VidSrc 5",
+      title: "VidSrc v3",
       source: `https://vidsrc.cc/v3/embed/tv/${id}/${season}/${episode}?autoPlay=false`,
       recommended: true,
       fast: true,
@@ -181,5 +196,11 @@ export const getTvShowPlayers = (
       source: `https://moviesapi.club/tv/${id}-${season}-${episode}`,
       ads: true,
     },
+    {
+      title: "VidLink",
+      source: `https://vidlink.pro/tv/${id}/${season}/${episode}?primaryColor=f5a524&autoplay=false`,
+      fast: true,
+      ads: true,
+    },    
   ];
 };
