@@ -12,7 +12,7 @@ export const getMoviePlayers = (id: string | number): PlayersProps[] => {
   return [
     {
       title: "Kflix",
-      source: `https://player.videasy.net/movie/${id}`,
+      source: `https://player.vidplus.to/embed/movie/${id}`,
       recommended: true,
       fast: true,
     },
@@ -22,8 +22,8 @@ export const getMoviePlayers = (id: string | number): PlayersProps[] => {
       ads: true,
     },
     {
-      title: "<Vidplus>",
-      source: `https://player.vidplus.to/embed/movie/${id}`,
+      title: "<Videasy>",
+      source: `https://player.videasy.net/movie/${id}`,
       recommended: true,      
     },
     {
@@ -117,7 +117,7 @@ export const getTvShowPlayers = (
   return [
     {
       title: "Kflix",
-      source: `https://player.videasy.net/tv/${id}/${season}/${episode}`,
+      source: `https://player.vidplus.to/embed/tv/${id}/${season}/${episode}`,
       recommended: true,
       fast: true,
       ads: true,
@@ -128,8 +128,8 @@ export const getTvShowPlayers = (
       ads: true,
     },
     {
-      title: "<Vidplus>",
-      source: `https://player.vidplus.to/embed/tv/${id}/${season}/${episode}`,
+      title: "<Videasy>",
+      source: `https://player.videasy.net/tv/${id}/${season}/${episode}`,
       ads: true,
     },
     {
