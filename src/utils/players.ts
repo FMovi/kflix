@@ -10,92 +10,48 @@ import { PlayersProps } from "@/types";
  */
 export const getMoviePlayers = (id: string | number): PlayersProps[] => {
   return [
+    
     {
-      title: "Kflix",
+      title: "Server 1",
       source: `https://player.vidplus.to/embed/movie/${id}`,
       recommended: true,
       fast: true,
     },
-    {
-      title: "VidSrc",
-      source: `https://vidsrc.cc/v2/embed/movie/${id}?autoPlay=false`,
-      ads: true,
-    },
-    {
-      title: "<Videasy>",
-      source: `https://player.videasy.net/movie/${id}`,
-      recommended: true,      
-    },
-    {
-      title: "<Embed>",
-      source: `https://embed.su/embed/movie/${id}`,
-      ads: true,
-    },
-    {
-      title: "SuperEmbed",
-      source: `https://multiembed.mov/directstream.php?video_id=${id}&tmdb=1`,
-      fast: true,
-      ads: true,
-    },
-    {
-      title: "FilmKu",
-      source: `https://filmku.stream/embed/${id}`,
-      ads: true,
-    },
-    {
-      title: "NontonGo",
-      source: `https://www.nontongo.win/embed/movie/${id}`,
-      ads: true,
-    },
-    {
-      title: "AutoEmbed 1",
-      source: `https://autoembed.co/movie/tmdb/${id}`,
-      fast: true,
-      ads: true,
-    },
-    {
-      title: "AutoEmbed 2",
-      source: `https://player.autoembed.cc/embed/movie/${id}`,
-      ads: true,
-    },
-    {
-      title: "2Embed",
-      source: `https://www.2embed.cc/embed/${id}`,
-      ads: true,
-    },
-    {
-      title: "VidSrc 1",
-      source: `https://vidsrc.xyz/embed/movie/${id}`,
-      ads: true,
-    },
-    {
-      title: "VidSrc 2",
-      source: `https://vidsrc.to/embed/movie/${id}`,
-      ads: true,
-    },
-    {
-      title: "VidSrc 3",
-      source: `https://vidsrc.icu/embed/movie/${id}`,
-      ads: true,
-    },
-    {
-      title: "VidSrc 5",
+        {
+      title: "Server 2",
       source: `https://vidsrc.cc/v3/embed/movie/${id}?autoPlay=false`,
       recommended: true,
       fast: true,
       ads: true,
     },
     {
-      title: "MoviesAPI",
+      title: "Server 3",
+      source: `https://kisskh.wiki/embed/${id}/color-15006D`,
+      recommended: true,
+      fast: true,
+      ads: true,
+    },
+    {
+      title: "Server 4",
+      source: `https://vidsrc.cc/v2/embed/movie/${id}?autoPlay=false`,
+      recommended: true,
+      ads: true,
+    },
+    {
+      title: "Server 5",
+      source: `https://vidsrc.icu/embed/movie/${id}`,
+      ads: true,
+    },
+    {
+      title: "Server 6",
       source: `https://moviesapi.club/movie/${id}`,
       ads: true,
     },
     {
-      title: "VidLink",
+      title: "Server 7",
       source: `https://vidlink.pro/movie/${id}?primaryColor=006fee&autoplay=false`,
-      fast: true,
       ads: true,
-    },    
+    },
   ];
 };
 
@@ -116,91 +72,61 @@ export const getTvShowPlayers = (
 ): PlayersProps[] => {
   return [
     {
-      title: "Kflix",
+      title: "Server 1",
       source: `https://player.vidplus.to/embed/tv/${id}/${season}/${episode}`,
       recommended: true,
       fast: true,
       ads: true,
     },
-    {
-      title: "VidSrc",
-      source: `https://vidsrc.cc/v2/embed/tv/${id}/${season}/${episode}?autoPlay=false`,
-      ads: true,
-    },
-    {
-      title: "<Videasy>",
-      source: `https://player.videasy.net/tv/${id}/${season}/${episode}`,
-      ads: true,
-    },
-    {
-      title: "<Embed>",
-      source: `https://embed.su/embed/tv/${id}/${season}/${episode}`,
-      ads: true,
-    },
-    {
-      title: "SuperEmbed",
-      source: `https://multiembed.mov/directstream.php?video_id=${id}&tmdb=1&s=${season}&e=${episode}`,
-      fast: true,
-      ads: true,
-    },
-    {
-      title: "FilmKu",
-      source: `https://filmku.stream/embed/series?tmdb=${id}&sea=${season}&epi=${episode}`,
-      ads: true,
-    },
-    {
-      title: "NontonGo",
-      source: `https://www.NontonGo.win/embed/tv/${id}/${season}/${episode}`,
-      ads: true,
-    },
-    {
-      title: "AutoEmbed 1",
-      source: `https://autoembed.co/tv/tmdb/${id}-${season}-${episode}`,
-      fast: true,
-      ads: true,
-    },
-    {
-      title: "AutoEmbed 2",
-      source: `https://player.autoembed.cc/embed/tv/${id}/${season}/${episode}`,
-      ads: true,
-    },
-    {
-      title: "2Embed",
-      source: `https://www.2embed.cc/embedtv/${id}&s=${season}&e=${episode}`,
-      ads: true,
-    },
-    {
-      title: "VidSrc 1",
-      source: `https://vidsrc.xyz/embed/tv/${id}/${season}/${episode}`,
-      ads: true,
-    },
-    {
-      title: "VidSrc 2",
-      source: `https://vidsrc.to/embed/tv/${id}/${season}/${episode}`,
-      ads: true,
-    },
-    {
-      title: "VidSrc 3",
-      source: `https://vidsrc.icu/embed/tv/${id}/${season}/${episode}`,
-      ads: true,
-    },
-    {
-      title: "VidSrc v3",
+        {
+      title: "Server 2",
       source: `https://vidsrc.cc/v3/embed/tv/${id}/${season}/${episode}?autoPlay=false`,
       recommended: true,
       fast: true,
       ads: true,
     },
-    {
-      title: "MoviesAPI",
-      source: `https://moviesapi.club/tv/${id}-${season}-${episode}`,
+        {
+      title: "Server 3",
+      source: `https://kisskh.wiki/embed/tv/${id}/${season}/${episode}`,
+      recommended: true,
+      fast: true,
       ads: true,
     },
     {
-      title: "VidLink",
-      source: `https://vidlink.pro/tv/${id}/${season}/${episode}?primaryColor=f5a524&autoplay=false`,
-      fast: true,
+      title: "Server 4",
+      source: `https://vidsrc.cc/v2/embed/tv/${id}/${season}/${episode}?autoPlay=false`,
+      recommended: true,
       ads: true,
-    },    
+    },
+    {
+      title: "Server 5",
+      source: `https://vidsrc.icu/embed/tv/${id}/${season}/${episode}`,
+      ads: true,
+    },
+    {
+      title: "Server 6",
+      source: `https://moviesapi.club/tv/${id}-${season}-${episode}`,
+      ads: true,
+    },
+        {
+      title: "Server 7",
+      source: `https://vidlink.pro/tv/${id}/${season}/${episode}?primaryColor=f5a524&autoplay=false`,
+      ads: true,
+    },
+    {
+      title: "Server 8",
+      source: `https://multiembed.mov/directstream.php?video_id=${id}&tmdb=1&s=${season}&e=${episode}`,
+      ads: true,
+    },
+    {
+      title: "Server 9",
+      source: `https://filmku.stream/embed/series?tmdb=${id}&sea=${season}&epi=${episode}`,
+      ads: true,
+    },
+    {
+      title: "Server 10",
+      source: `https://www.NontonGo.win/embed/tv/${id}/${season}/${episode}`,
+      ads: true,
+    },
   ];
 };
