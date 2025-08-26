@@ -9,7 +9,6 @@ import { useInViewport } from "@mantine/hooks";
 import { useQuery } from "@tanstack/react-query";
 import { kebabCase } from "string-ts";
 import { Movie } from "tmdb-ts/dist/types";
-import Banner728x90 from "@/components/ads/Banner728x90";
 
 const MovieHomeList: React.FC<QueryList<Movie>> = ({ query, name, param }) => {
   const key = kebabCase(name) + "-list";
@@ -58,9 +57,6 @@ const MovieHomeList: React.FC<QueryList<Movie>> = ({ query, name, param }) => {
           </Carousel>
         </div>
       )}
-     <div className="flex justify-center py-4"> 
-    <Banner728x90 />
-    </div>    
     </section>
   );
 };
