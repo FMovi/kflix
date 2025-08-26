@@ -10,9 +10,6 @@ import { useQuery } from "@tanstack/react-query";
 import { kebabCase } from "string-ts";
 import { TV } from "tmdb-ts/dist/types";
 
-// Import your ad component
-import Banner300x250 from "@/components/ads/Banner300x250";
-
 const TvShowHomeList: React.FC<QueryList<TV>> = ({ query, name, param }) => {
   const key = kebabCase(name) + "-list";
   const { ref, inViewport } = useInViewport();
@@ -46,7 +43,6 @@ const TvShowHomeList: React.FC<QueryList<TV>> = ({ query, name, param }) => {
               See All &gt;
             </Link>
           </div>
-
           <Carousel>
             {data?.results.map((tv) => (
               <div
@@ -57,11 +53,6 @@ const TvShowHomeList: React.FC<QueryList<TV>> = ({ query, name, param }) => {
               </div>
             ))}
           </Carousel>
-
-          {/* ✅ Insert Ad after Carousel */}
-          <div className="flex justify-center py-4">
-            <Banner300x250 />
-          </div>
         </div>
       )}
     </section>
