@@ -5,23 +5,22 @@ import { Accordion, AccordionItem, Link } from "@heroui/react";
 
 const FAQS = [
   {
-    title: "🤔 What is Cinextma?",
+    title: "🤔 What is Kflix?",
     description:
-      "Just like every other website, Cinextma is also a streaming site that helps to easily access all the TV shows and movies we wanted, without spending hours searching for them.",
+      "Kflix is a streaming hub that helps you easily find and watch your favorite movies and TV shows in one place. No more wasting time searching across the internet — Kflix makes entertainment simple and convenient.",
   },
   {
-    title: "❓ So what do we actually do?",
+    title: "❓ What does Kflix actually do?",
     description:
-      "Well, let me tell you what we don’t do: we definitely don’t illegally host our files. We do not store any copyright-protected content on our website. Any linked content is stored only in third-party websites. This is a promotional website only. All files placed here are for introducing purpose. We highly ENCOURAGE users to BUY the CDs or DVDs of the movie or the music they like.",
+      "Here’s what we DON’T do: Kflix does not host or store any copyrighted content. All videos are linked from third-party services. Our platform is purely promotional and designed to make content discovery easier. If you love a movie or show, we strongly encourage you to support the creators by purchasing or subscribing through official channels.",
   },
   {
-    title: "🚫 I cannot watch video because of ads",
+    title: "🚫 Why are there ads on videos?",
     description: (
       <p>
-        We are very sorry that we can't help you with that. We have no control in the ads being
-        served. Don't download anything in the popups. If you don't want to be annoyed. We highly
-        recommend subscribing to a legal streaming service that you can afford (or use an adblocker
-        like{" "}
+        We understand ads can be annoying, but Kflix has no control over ads shown by third-party
+        video hosts. Please avoid downloading anything from popups. If you want an ad-free
+        experience, we recommend using a trusted ad-blocker like{" "}
         <Link href="https://ublockorigin.com/" target="_blank" className="font-bold">
           uBlock Origin
         </Link>{" "}
@@ -29,24 +28,25 @@ const FAQS = [
         <Link href="https://adblockplus.org/" target="_blank" className="font-bold">
           Adblock Plus
         </Link>
-        ).
+        . For the smoothest experience, subscribing to a legal streaming service is always the best
+        option.
       </p>
     ),
   },
   {
-    title: "🐌 Streaming speed is slow or all videos do not play",
+    title: "🐌 Videos are buffering or not playing",
     description:
-      "When you go on the page with the episode, in 99% of the cases there is a video player. What you have to do is click the Play button, of course. If it does not work (Don’t be judgmental! Everybody makes mistakes!), just click on the Servers you see on the top right of your device. You will get a list of servers [Vidlink, VidSrc etc.] Try choosing different server, it will definitely solve the problem.",
+      "If a video doesn’t load, try selecting another available server from the player options (e.g., Vidlink, VidSrc, etc.). In most cases, switching servers fixes playback issues instantly.",
   },
   {
-    title: "😁 I want to download video",
+    title: "😁 Can I download videos from Kflix?",
     description:
-      "Since we don't store any files, so we don't have any download feature here. All files found on this site have been collected from various sources across the web and are believed to be in the public domain.",
+      "Kflix does not provide downloads, since we don’t host files ourselves. All videos are streamed from third-party platforms. If you wish to keep a copy, we recommend buying or subscribing to official sources to support the creators.",
   },
   {
-    title: "😟 Is it safe to stream in this website?",
+    title: "😟 Is streaming on Kflix safe?",
     description:
-      "This website is undoubtedly safer to stream, however downloading, uploading is illegal. You will not get into any trouble while using our website. It's highly not recommended to download the files and share them to the public, It might get you in trouble.",
+      "Streaming on Kflix is generally safe, since we don’t host files directly. However, downloading or re-uploading copyrighted material is illegal and not recommended. Use Kflix responsibly and enjoy your entertainment worry-free.",
   },
 ];
 
