@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useCallback } from "react";
 import { Movie } from "tmdb-ts/dist/types";
 import { useLongPress } from "use-long-press";
-import HoverPosterCard from "./Hover";
+/*import HoverPosterCard from "./Hover";*/
 
 interface MoviePosterCardProps {
   movie: Movie;
