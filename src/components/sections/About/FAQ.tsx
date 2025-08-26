@@ -36,7 +36,7 @@ const FAQS = [
   {
     title: "🐌 Videos are buffering or not playing",
     description:
-      "If a video doesn’t load, try selecting another available server from the player options (e.g., Vidlink, VidSrc, etc.). In most cases, switching servers fixes playback issues instantly.",
+      "If a video doesn’t load, try selecting another available server from the player options (e.g., VidSrc, VidSrc V1, etc.). In most cases, switching servers fixes playback issues instantly.",
   },
   {
     title: "😁 Can I download videos from Kflix?",
