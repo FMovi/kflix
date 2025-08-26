@@ -13,14 +13,10 @@ import {
 } from "react-icons/io5";
 import { TbFolder, TbFolderFilled } from "react-icons/tb";
 
-// ✅ Import your Ad component
-import Banner300x250 from "@/components/ads/Banner300x250";
-
 export const siteConfig: SiteConfigType = {
-  name: "Kflix",
+  name: "Cinextma",
   description: "Your only choice for a free movies and tv shows streaming website.",
   favicon: "/favicon.ico",
-
   navItems: [
     {
       label: "Home",
@@ -53,7 +49,6 @@ export const siteConfig: SiteConfigType = {
       activeIcon: <IoInformationCircle className="size-full" />,
     },
   ],
-
   themes: [
     {
       name: "light",
@@ -68,7 +63,6 @@ export const siteConfig: SiteConfigType = {
       icon: <HiComputerDesktop className="size-full" />,
     },
   ],
-
   queryLists: {
     movies: [
       {
@@ -80,12 +74,6 @@ export const siteConfig: SiteConfigType = {
         name: "This Week's Trending Movies",
         query: () => tmdb.trending.trending("movie", "week"),
         param: "thisWeekTrending",
-      },
-      // ✅ Insert Ad after "This Week's Trending Movies"
-      {
-        isAd: true,
-        component: <Banner300x250 />,
-        param: "moviesAd1",
       },
       {
         name: "Popular Movies",
@@ -108,7 +96,6 @@ export const siteConfig: SiteConfigType = {
         param: "topRated",
       },
     ],
-
     tvShows: [
       {
         name: "Today's Trending TV Shows",
@@ -120,35 +107,28 @@ export const siteConfig: SiteConfigType = {
         query: () => tmdb.trending.trending("tv", "week"),
         param: "thisWeekTrending",
       },
-      // ✅ Insert Ad after "This Week's Trending TV Shows"
-      {
-        isAd: true,
-        component: <Banner300x250 />,
-        param: "tvAd1",
-      },
       {
         name: "Popular TV Shows",
-        // @ts-expect-error
+        // @ts-expect-error: Property 'adult' is missing in type 'PopularTvShowResult' but required in type 'TV'.
         query: () => tmdb.tvShows.popular(),
         param: "popular",
       },
       {
         name: "On The Air TV Shows",
-        // @ts-expect-error
+        // @ts-expect-error: Property 'adult' is missing in type 'OnTheAirResult' but required in type 'TV'.
         query: () => tmdb.tvShows.onTheAir(),
         param: "onTheAir",
       },
       {
         name: "Top Rated TV Shows",
-        // @ts-expect-error
+        // @ts-expect-error: Property 'adult' is missing in type 'TopRatedTvShowResult' but required in type 'TV'.
         query: () => tmdb.tvShows.topRated(),
         param: "topRated",
       },
     ],
   },
-
   socials: {
-    github: "https://github.com/",
+    github: "https://github.com/wisnuwirayuda15/cinextma",
   },
 };
 
