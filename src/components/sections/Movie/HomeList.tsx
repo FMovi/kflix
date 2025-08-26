@@ -10,6 +10,9 @@ import { useQuery } from "@tanstack/react-query";
 import { kebabCase } from "string-ts";
 import { Movie } from "tmdb-ts/dist/types";
 
+// ✅ Import your Ad banner
+import Banner728x90 from "@/components/ads/Banner728x90";
+
 const MovieHomeList: React.FC<QueryList<Movie>> = ({ query, name, param }) => {
   const key = kebabCase(name) + "-list";
   const { ref, inViewport } = useInViewport();
@@ -30,7 +33,8 @@ const MovieHomeList: React.FC<QueryList<Movie>> = ({ query, name, param }) => {
           <Skeleton className="h-[250px] rounded-lg md:h-[300px]" />
         </div>
       ) : (
-        <div className="z-[3] flex flex-col gap-2">
+        <div className="z-[3] flex flex-col gap-4">
+          {/* Section header */}
           <div className="flex flex-grow items-center justify-between">
             <SectionTitle>{name}</SectionTitle>
             <Link
@@ -43,17 +47,20 @@ const MovieHomeList: React.FC<QueryList<Movie>> = ({ query, name, param }) => {
               See All &gt;
             </Link>
           </div>
+
+          {/* ✅ Ad in the middle (centered) */}
+          <Banner728x90 />
+
+          {/* Movie carousel */}
           <Carousel>
-            {data?.results.map((movie) => {
-              return (
-                <div
-                  key={movie.id}
-                  className="embla__slide flex min-h-fit max-w-fit items-center px-1 py-2"
-                >
-                  <MoviePosterCard movie={movie} />
-                </div>
-              );
-            })}
+            {data?.results.map((movie) => (
+              <div
+                key={movie.id}
+                className="embla__slide flex min-h-fit max-w-fit items-center px-1 py-2"
+              >
+                <MoviePosterCard movie={movie} />
+              </div>
+            ))}
           </Carousel>
         </div>
       )}
