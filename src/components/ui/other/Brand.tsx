@@ -29,23 +29,6 @@ export default function Brand() {
             height={32}
             className="mr-1"
           />
-
-          {/* Arrow (movie / tv toggle color) */}
-          <Next
-            className={cn("px-[2px] transition-colors", {
-              "text-primary": content === "movie",
-              "text-warning": content === "tv",
-            })}
-          />
-
-          {/* Replace text "Flix" with flix.ico */}
-          <Image
-            src="/icons/flix.ico"
-            alt="Flix Logo"
-            width={64}   // adjust size as needed
-            height={32}
-            className="ml-1"
-          />
         </span>
       </Link>
     </div>
