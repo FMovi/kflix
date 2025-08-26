@@ -10,20 +10,11 @@ import { useQuery } from "@tanstack/react-query";
 import { kebabCase } from "string-ts";
 import { Movie } from "tmdb-ts/dist/types";
 
-interface MovieListProps extends Partial<QueryList<Movie>> {
-  isAd?: boolean;
-  component?: React.ReactNode;
-}
-
-const MovieHomeList: React.FC<MovieListProps> = ({ query, name, param, isAd, component }) => {
-  if (isAd) {
-    return <div className="my-6 flex justify-center">{component}</div>;
-  }
-
-  const key = kebabCase(name || "") + "-list";
+const MovieHomeList: React.FC<QueryList<Movie>> = ({ query, name, param }) => {
+  const key = kebabCase(name) + "-list";
   const { ref, inViewport } = useInViewport();
   const { data, isPending } = useQuery({
-    queryFn: query!,
+    queryFn: query,
     queryKey: [key],
     enabled: inViewport,
   });
