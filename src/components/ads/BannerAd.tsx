@@ -3,24 +3,38 @@
 import React, { useEffect } from "react";
 
 interface BannerAdProps {
-  adKey: string;
+  adKey: string; // The key from Adsterra
   width?: number;
   height?: number;
-  id: string;
+  id: string; // Unique container ID
 }
 
-const BannerAd: React.FC<BannerAdProps> = ({ adKey, width = 300, height = 250, id }) => {
+const BannerAd: React.FC<BannerAdProps> = ({ adKey, width = 728, height = 90, id }) => {
   useEffect(() => {
-    // Load Adsterra script dynamically
+    // Define atOptions before script loads
+    (window as any).atOptions = {
+      key: adKey,
+      format: "iframe",
+      height,
+      width,
+      params: {},
+    };
+
+    // Create script
     const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = `//www.highperformanceformat.com/${adKey}/invoke.js`;
     script.async = true;
-    script.src = `https://www.highperformanceformat.com/297ed86b29d181f660479ebab2f97717/invoke.js`;
-    document.getElementById(id)?.appendChild(script);
-  }, [adKey, id]);
+
+    const container = document.getElementById(id);
+    if (container) {
+      container.innerHTML = ""; // clear on re-render
+      container.appendChild(script);
+    }
+  }, [adKey, width, height, id]);
 
   return (
     <div className="flex justify-center">
-      {/* The ad will load inside this container */}
       <div id={id} style={{ width, height }} />
     </div>
   );
