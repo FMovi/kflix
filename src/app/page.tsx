@@ -7,6 +7,10 @@ import { NextPage } from "next";
 import dynamic from "next/dynamic";
 import { parseAsStringLiteral, useQueryState } from "nuqs";
 import { Suspense } from "react";
+
+// ✅ Import BannerAd
+import BannerAd from "@/components/ads/BannerAd";
+
 const MovieHomeList = dynamic(() => import("@/components/sections/Movie/HomeList"));
 const TvShowHomeList = dynamic(() => import("@/components/sections/TV/HomeList"));
 
@@ -36,6 +40,16 @@ const HomePage: NextPage = () => {
           {content === "tv" && tvShows.map((tv) => <TvShowHomeList key={tv.name} {...tv} />)}
         </div>
       </Suspense>
+
+      {/* ✅ Banner Ad at the bottom */}
+      <div className="flex justify-center my-8">
+        <BannerAd
+          adKey="YOUR-ADSTERRA-KEY"
+          width={728}
+          height={90}
+          id="ad-bottom"
+        />
+      </div>
     </div>
   );
 };
