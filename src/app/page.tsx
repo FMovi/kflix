@@ -44,7 +44,7 @@ const HomePage: NextPage = () => {
       {/* ✅ Banner Ad at the bottom */}
       <div className="flex justify-center my-8">
         <BannerAd
-          adKey="YOUR-ADSTERRA-KEY"
+          adKey="6551cbf85bccb8c248b360b96d7741d8"
           width={728}
           height={90}
           id="ad-bottom"
