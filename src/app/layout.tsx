@@ -12,6 +12,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/utils/helpers";
 import { IS_PRODUCTION } from "@/utils/constants";
 import dynamic from "next/dynamic";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics"; // ✅ Add this
+
 const Disclaimer = dynamic(() => import("@/components/ui/overlay/Disclaimer"));
 
 export const metadata: Metadata = {
@@ -63,6 +65,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Sidebar>
           <BottomNavbar />
         </Providers>
+
+        {/* ✅ Google Analytics (only loads in production) */}
+        {IS_PRODUCTION && <GoogleAnalytics GA_MEASUREMENT_ID="G-MGM1B6KYTE" />}
+
         <SpeedInsights debug={false} />
         <Analytics debug={false} />
       </body>
