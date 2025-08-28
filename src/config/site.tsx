@@ -14,7 +14,7 @@ import {
 import { TbFolder, TbFolderFilled } from "react-icons/tb";
 
 export const siteConfig: SiteConfigType = {
-  name: "Kflix",
+  name: "kisskh",
   description: "Your only choice for a free movies and tv shows streaming website.",
   favicon: "/favicon.ico",
   navItems: [
@@ -96,41 +96,36 @@ export const siteConfig: SiteConfigType = {
         param: "topRated",
       },
     ],
-tvShows: [
-  {
-    name: "Today's Trending TV Shows",
-    query: () => tmdb.trending.trending("tv", "day"),
-    param: "todayTrending",
-  },
-  {
-    name: "Top K-Drama",
-    query: () =>
-      tmdb.discover.tvShow({
-        with_original_language: "ko", // Korean dramas
-        sort_by: "popularity.desc",
-      }),
-    param: "topKDrama",
-  },
-  {
-    name: "Top C-Drama",
-    query: () =>
-      tmdb.discover.tvShow({
-        with_original_language: "zh", // Chinese dramas
-        sort_by: "popularity.desc",
-      }),
-    param: "topCDrama",
-  },
-  {
-    name: "On The Air TV Shows",
-    query: () => tmdb.tvShows.onTheAir(),
-    param: "onTheAir",
-  },
-  {
-    name: "Top Rated TV Shows",
-    query: () => tmdb.tvShows.topRated(),
-    param: "topRated",
-  },
-],
+    tvShows: [
+      {
+        name: "Today's Trending TV Shows",
+        query: () => tmdb.trending.trending("tv", "day"),
+        param: "todayTrending",
+      },
+      {
+        name: "This Week's Trending TV Shows",
+        query: () => tmdb.trending.trending("tv", "week"),
+        param: "thisWeekTrending",
+      },
+      {
+        name: "Popular TV Shows",
+        // @ts-expect-error: Property 'adult' is missing in type 'PopularTvShowResult' but required in type 'TV'.
+        query: () => tmdb.tvShows.popular(),
+        param: "popular",
+      },
+      {
+        name: "On The Air TV Shows",
+        // @ts-expect-error: Property 'adult' is missing in type 'OnTheAirResult' but required in type 'TV'.
+        query: () => tmdb.tvShows.onTheAir(),
+        param: "onTheAir",
+      },
+      {
+        name: "Top Rated TV Shows",
+        // @ts-expect-error: Property 'adult' is missing in type 'TopRatedTvShowResult' but required in type 'TV'.
+        query: () => tmdb.tvShows.topRated(),
+        param: "topRated",
+      },
+    ],
   },
   socials: {
     github: "https://github.com/",
