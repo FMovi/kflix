@@ -105,7 +105,7 @@ tvShows: [
   {
     name: "Top K-Drama",
     query: () =>
-      tmdb.discover.tv({
+      tmdb.discover.tvShows({
         with_original_language: "ko", // Korean dramas
         sort_by: "popularity.desc",
       }),
@@ -114,7 +114,7 @@ tvShows: [
   {
     name: "Top C-Drama",
     query: () =>
-      tmdb.discover.tv({
+      tmdb.discover.tvShows({
         with_original_language: "zh", // Chinese dramas
         sort_by: "popularity.desc",
       }),
