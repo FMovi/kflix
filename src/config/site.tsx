@@ -14,7 +14,7 @@ import {
 import { TbFolder, TbFolderFilled } from "react-icons/tb";
 
 export const siteConfig: SiteConfigType = {
-  name: "kisskh",
+  name: "Cinextma",
   description: "Your only choice for a free movies and tv shows streaming website.",
   favicon: "/favicon.ico",
   navItems: [
@@ -108,24 +108,6 @@ export const siteConfig: SiteConfigType = {
         param: "thisWeekTrending",
       },
       {
-        name: "K-Drama",
-        // @ts-expect-error: Property 'adult' is missing in type 'PopularTvShowResult' but required in type 'TV'.
-        query: () => tmdb.tvShows.kdrama(),
-        param: "kdrama",
-      },
-      {
-        name: "C-Drama",
-        // @ts-expect-error: Property 'adult' is missing in type 'PopularTvShowResult' but required in type 'TV'.
-        query: () => tmdb.tvShows.cdrama(),
-        param: "cdrama",
-      },
-      {
-        name: "Anime",
-        // @ts-expect-error: Property 'adult' is missing in type 'PopularTvShowResult' but required in type 'TV'.
-        query: () => tmdb.tvShows.anime(),
-        param: "anime",
-      },      
-      {
         name: "Popular TV Shows",
         // @ts-expect-error: Property 'adult' is missing in type 'PopularTvShowResult' but required in type 'TV'.
         query: () => tmdb.tvShows.popular(),
@@ -146,7 +128,7 @@ export const siteConfig: SiteConfigType = {
     ],
   },
   socials: {
-    github: "https://github.com/",
+    github: "https://github.com/wisnuwirayuda15/cinextma",
   },
 };
 
