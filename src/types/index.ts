@@ -17,9 +17,6 @@ export type MovieParam =
 export type TvShowParam =
   | "todayTrending"
   | "thisWeekTrending"
-  | "kdrama"
-  | "cdrama"
-  | "anime"
   | "popular"
   | "onTheAir"
   | "topRated";
