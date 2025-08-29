@@ -108,6 +108,24 @@ export const siteConfig: SiteConfigType = {
         param: "thisWeekTrending",
       },
       {
+        name: "K-Drama",
+        // @ts-expect-error: Property 'adult' is missing in type 'PopularTvShowResult' but required in type 'TV'.
+        query: () => tmdb.tvShows.kdrama(),
+        param: "kdrama",
+      },
+      {
+        name: "C-Drama",
+        // @ts-expect-error: Property 'adult' is missing in type 'PopularTvShowResult' but required in type 'TV'.
+        query: () => tmdb.tvShows.cdrama(),
+        param: "cdrama",
+      },
+      {
+        name: "Anime",
+        // @ts-expect-error: Property 'adult' is missing in type 'PopularTvShowResult' but required in type 'TV'.
+        query: () => tmdb.tvShows.anime(),
+        param: "anime",
+      },      
+      {
         name: "Popular TV Shows",
         // @ts-expect-error: Property 'adult' is missing in type 'PopularTvShowResult' but required in type 'TV'.
         query: () => tmdb.tvShows.popular(),
