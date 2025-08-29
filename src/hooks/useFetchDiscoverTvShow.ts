@@ -18,6 +18,9 @@ const useFetchDiscoverTvShows = ({
   const discover = () => tmdb.discover.tvShow({ page: page, with_genres: genres });
   const todayTrending = () => tmdb.trending.trending("tv", "day", { page: page });
   const thisWeekTrending = () => tmdb.trending.trending("tv", "week", { page: page });
+  const kdrama = () => tmdb.tvShows.kdrama({ page: page });
+  const cdrama = () => tmdb.tvShows.cdrama({ page: page });
+  const anime = () => tmdb.tvShows.anime({ page: page });
   const popular = () => tmdb.tvShows.popular({ page: page });
   const onTheAir = () => tmdb.tvShows.onTheAir({ page: page });
   const topRated = () => tmdb.tvShows.topRated({ page: page });
@@ -26,6 +29,9 @@ const useFetchDiscoverTvShows = ({
     discover,
     todayTrending,
     thisWeekTrending,
+    kdrama,
+    cdrama,
+    anime,
     popular,
     onTheAir,
     topRated,
