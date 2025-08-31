@@ -2,12 +2,11 @@
   "name": "kflix",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build && npx @cloudflare/next-on-pages",
-    "start": "next start",
-    "lint": "next lint"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build && npx @cloudflare/next-on-pages",
+  "start": "next start"
+},
   "dependencies": {
     "@bprogress/next": "^3.2.12",
     "@designbycode/tailwindcss-text-shadow": "^2.2.1",
