@@ -13,7 +13,7 @@ export const getMoviePlayers = (id: string | number): PlayersProps[] => {
     
     {
       title: "Server 1",
-      source: `https://player.vidplus.to/embed/movie/${id}`,
+      source: `https://www.cineby.app/${id}`,
       recommended: true,
       fast: true,
     },
@@ -73,7 +73,7 @@ export const getTvShowPlayers = (
   return [
     {
       title: "Server 1",
-      source: `https://player.vidplus.to/embed/tv/${id}/${season}/${episode}`,
+      source: `https://www.cineby.app/tv/${id}/${season}/${episode}`,
       recommended: true,
       fast: true,
       ads: true,
