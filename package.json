@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",                // ✅ for local Next.js build
-    "cf-build": "npx @cloudflare/next-on-pages", // ✅ for Cloudflare Pages build
+    "build": "npx @cloudflare/next-on-pages@latest build",
     "start": "next start"
   },
   "dependencies": {
@@ -37,6 +36,7 @@
     "yet-another-react-lightbox": "^3.25.0"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.14.2",
     "@iconify/react": "^6.0.0",
     "@tanstack/react-query-devtools": "^5.85.3",
     "@types/node": "^20",
